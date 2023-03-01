@@ -33,8 +33,6 @@ def book():
     column = day % 7
     if day % 7 == 0: row = row - 1
     if column == 0: column = 7
-    print(day)
-    print(column)
 
     try:
         WebDriverWait(driver, 5).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='s-lc-rm-cal']/div/table/tbody/tr[%s]/td[%d]/a" % (row, column))))
